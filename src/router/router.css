@@ -1,0 +1,48 @@
+@import '../assets/styles/variable.css';
+@import '../assets/styles/mixin.css';
+
+.router {
+  width: 100%;
+  height: 100%;
+  display: flex;
+
+  .router-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    .transition-group {
+      width: 100%;
+      flex: 1;
+      display: flex;
+      position: relative;
+      overflow-y: auto;
+
+      .transition-page {
+        width: 100%;
+        height: 100%;
+        flex: 1;
+        @mixin fill;
+      }
+    }
+  }
+}
+
+:global(.fade-enter) {
+  opacity: 0;
+  z-index: 1;
+}
+
+:global(.fade-enter.fade-enter-active) {
+  opacity: 1;
+  transition: opacity 400ms ease-in;
+}
+
+:global(.fade-exit) {
+  opacity: 1;
+}
+
+:global(.fade-exit.fade-exit-active) {
+  opacity: 0;
+  transition: opacity 200ms ease-out;
+}

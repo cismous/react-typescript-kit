@@ -1,0 +1,120 @@
+@import './variable.css';
+
+body {
+  a,
+  a:hover,
+  a:focus {
+    text-decoration: none;
+  }
+}
+
+html body {
+  font-family: $fontFamilyLight;
+  background: #fdfdfe;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+
+[class*=' icon-'],
+[class^='icon-'] {
+  font-family: 'iconfont';
+  font-style: normal;
+  font-weight: 400;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: baseline;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  font-variant: normal normal;
+}
+
+:global(#root) {
+  height: 100%;
+}
+
+:global(.loading) {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  :global(.ant-card) {
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12);
+
+    :global(.ant-card-extra) {
+      padding: 8px 0;
+    }
+
+    :global(.ant-card-head) {
+      padding: 0 22px;
+
+      :global(.ant-card-head-title) {
+        line-height: 24px;
+        font-family: $fontFamilyRegular;
+        padding: 12px 0;
+
+        &::before {
+          content: ' ';
+          height: 22px;
+          border-left: 2px solid #1890ff;
+          margin-right: 8px;
+        }
+      }
+    }
+
+    :global(.ant-card-body) {
+      padding: 20px;
+    }
+  }
+
+  :global(.ant-modal-confirm-title) {
+    font-family: $fontFamilyMedium;
+  }
+
+  :global(.ant-modal-confirm-content) {
+    margin-top: 10px;
+  }
+
+  :global(.ant-table) {
+    font-family: $fontFamilyWeight;
+    font-weight: 300;
+
+    :global(.ant-table-thead > tr > th),
+    :global(.ant-table-tbody > tr > td) {
+      padding: 11px 16px;
+    }
+
+    :global(.ant-table-tbody > tr > td) {
+    }
+
+    :global(.ant-table-thead > tr > th) {
+      font-family: $fontFamilyRegular;
+    }
+  }
+
+  :global(.ant-table-pagination.ant-pagination) {
+    margin-bottom: 0;
+  }
+}
+
+.column-right {
+  text-align: right !important;
+}
+
+:global(.hide) {
+  display: none !important;
+}
+
+:global(.chart-tooltip) {
+  :global(.ant-tooltip-inner) {
+    padding: 8px 14px;
+    font-size: 12px;
+
+    :global(.time) {
+      margin-bottom: 4px;
+    }
+  }
+}

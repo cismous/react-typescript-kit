@@ -1,0 +1,7 @@
+@import './variable.css';
+
+@define-mixin fill {
+  padding: $gap;
+  position: absolute;
+  overflow-y: auto;
+}
